@@ -1,6 +1,8 @@
 /**
  * Created by hustcc 17/12/25.
  * Contract: i@hust.cc
+ * Adapted to Vitest by schirrel at  March 1 2023
+ * Contract: me@schirrel.dev
  */
 
 import mockWindow from './window';

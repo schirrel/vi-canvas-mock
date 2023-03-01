@@ -1,6 +1,6 @@
 {
   "name": "vi-canvas-mock",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Mock a canvas in your vitest tests.",
   "main": "lib/index.js",
   "types": "types/index.d.ts",
