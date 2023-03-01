@@ -24,7 +24,8 @@
     "babel-plugin-version": "^0.2.3",
     "coveralls": "^3.0.11",
     "husky": "^4.2.5",
-    "prettier": "^2.0.4"
+    "prettier": "^2.0.4",
+    "vitest": "^0.29.2"
   },
   "commitlint": {
     "extends": [
