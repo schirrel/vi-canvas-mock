@@ -1,5 +1,5 @@
 import ImageBitmap from '../classes/ImageBitmap';
-import { vi } from 'vitest';
+
 
 export default vi.fn(function createImageBitmap(
   img,

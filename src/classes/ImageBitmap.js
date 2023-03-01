@@ -1,4 +1,4 @@
-import { vi } from 'vitest';
+
 
 export default class ImageBitmap {
   width = 0;

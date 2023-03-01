@@ -1,5 +1,5 @@
 import { MooColor } from 'moo-color';
-import { vi } from 'vitest';
+
 
 export default class CanvasGradient {
   constructor() {
