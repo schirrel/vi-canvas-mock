@@ -1,3 +1,5 @@
+import { vi } from 'vitest';
+
 export default function mockPrototype() {
   /**
    * This weakmap is designed to contain all of the generated canvas contexts. It's keys are the
@@ -10,7 +12,7 @@ export default function mockPrototype() {
    * value of getContext. It attempts to preserve the original getContext function by storing it on
    * the callback as a property.
    */
-  const getContext2D = jest.fn(function getContext2d(type) {
+  const getContext2D = vi.fn(function getContext2d(type) {
     if (type === '2d') {
       /**
        * Contexts must be idempotent. Once they are generated, they should be returned when
@@ -40,7 +42,7 @@ export default function mockPrototype() {
    * This function technically throws SecurityError at runtime, but it cannot be mocked, because
    * we don't know if the canvas is tainted. These kinds of errors will be silent.
    */
-  const toBlobOverride = jest.fn(function toBlobOverride(callback, mimetype) {
+  const toBlobOverride = vi.fn(function toBlobOverride(callback, mimetype) {
     if (arguments.length < 1)
       throw new TypeError(
         "Failed to execute 'toBlob' on 'HTMLCanvasElement': 1 argument required, but only 0 present."
@@ -84,7 +86,7 @@ export default function mockPrototype() {
    * This section creates a dataurl with a validated mime type. This is not actually valid, because
    * jpeg size is variable, and so is png. TODO: Is there a better way to do this?
    */
-  const toDataURLOverride = jest.fn(function toDataURLOverride(
+  const toDataURLOverride = vi.fn(function toDataURLOverride(
     type,
     encoderOptions
   ) {

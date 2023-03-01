@@ -1,6 +1,6 @@
 export default class CanvasPattern {
   constructor() {
-    this.setTransform = jest.fn(this.setTransform.bind(this));
+    this.setTransform = vi.fn(this.setTransform.bind(this));
   }
 
   setTransform(value) {

@@ -6,6 +6,7 @@ import createCanvasEvent from '../mock/createCanvasEvent';
 import Path2D from './Path2D';
 import { MooColor } from 'moo-color';
 
+import { vi } from 'vitest';
 const testFuncs = [
   'setLineDash',
   'getLineDash',
@@ -178,7 +179,7 @@ export default class CanvasRenderingContext2D {
 
   constructor(canvas) {
     testFuncs.forEach((key) => {
-      this[key] = jest.fn(CanvasRenderingContext2D.prototype[key].bind(this));
+      this[key] = vi.fn(CanvasRenderingContext2D.prototype[key].bind(this));
     });
     this._canvas = canvas;
   }

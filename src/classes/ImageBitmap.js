@@ -1,3 +1,5 @@
+import { vi } from 'vitest';
+
 export default class ImageBitmap {
   width = 0;
   height = 0;
@@ -7,7 +9,7 @@ export default class ImageBitmap {
   constructor(width, height) {
     this.width = width;
     this.height = height;
-    this.close = jest.fn(this.close.bind(this));
+    this.close = vi.fn(this.close.bind(this));
   }
 
   close() {
