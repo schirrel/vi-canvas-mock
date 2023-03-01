@@ -7,9 +7,13 @@ Thanks for the work @hustcc <3
 
 ## Install
 
-```sh yarn add -D vi-canvas-mock```  
+```sh 
+yarn add -D vi-canvas-mock
+```  
 or  
-```sh npm i --save-dev vi-canvas-mock```
+```sh
+npm i --save-dev vi-canvas-mock
+```
 
 ## Usage
 Simple import at you `vitest.setup` as
