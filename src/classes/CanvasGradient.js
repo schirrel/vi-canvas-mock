@@ -1,6 +1,5 @@
 import { MooColor } from 'moo-color';
 
-
 export default class CanvasGradient {
   constructor() {
     this.addColorStop = vi.fn(this.addColorStop.bind(this));

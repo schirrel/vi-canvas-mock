@@ -1,5 +1,3 @@
-
-
 export default function mockPrototype() {
   /**
    * This weakmap is designed to contain all of the generated canvas contexts. It's keys are the
@@ -31,7 +29,7 @@ export default function mockPrototype() {
     return getContext2D.internal.call(this, type);
   });
 
-  if (!jest.isMockFunction(HTMLCanvasElement.prototype.getContext)) {
+  if (!vi.isMockFunction(HTMLCanvasElement.prototype.getContext)) {
     getContext2D.internal = HTMLCanvasElement.prototype.getContext;
   } else {
     getContext2D.internal = HTMLCanvasElement.prototype.getContext.internal;
@@ -75,7 +73,7 @@ export default function mockPrototype() {
     setTimeout(() => callback(blob), 0);
   });
 
-  if (!jest.isMockFunction(HTMLCanvasElement.prototype.toBlob)) {
+  if (!vi.isMockFunction(HTMLCanvasElement.prototype.toBlob)) {
     toBlobOverride.internal = HTMLCanvasElement.prototype.toBlob;
   } else {
     toBlobOverride.internal = HTMLCanvasElement.prototype.toBlob.internal;
@@ -105,7 +103,7 @@ export default function mockPrototype() {
     return 'data:' + type + ';base64,00';
   });
 
-  if (!jest.isMockFunction(HTMLCanvasElement.prototype.toDataURL)) {
+  if (!vi.isMockFunction(HTMLCanvasElement.prototype.toDataURL)) {
     toDataURLOverride.internal = HTMLCanvasElement.prototype.toDataURL;
   } else {
     toDataURLOverride.internal = HTMLCanvasElement.prototype.toDataURL.internal;

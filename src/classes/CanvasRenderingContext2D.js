@@ -6,7 +6,6 @@ import createCanvasEvent from '../mock/createCanvasEvent';
 import Path2D from './Path2D';
 import { MooColor } from 'moo-color';
 
-
 const testFuncs = [
   'setLineDash',
   'getLineDash',

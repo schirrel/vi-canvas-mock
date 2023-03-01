@@ -1,6 +1,5 @@
 import ImageBitmap from '../classes/ImageBitmap';
 
-
 export default vi.fn(function createImageBitmap(
   img,
   sx,

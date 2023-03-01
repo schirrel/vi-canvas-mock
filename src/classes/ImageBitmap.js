@@ -1,5 +1,3 @@
-
-
 export default class ImageBitmap {
   width = 0;
   height = 0;
